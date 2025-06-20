@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documentación – Fluff.css</title>
+  <link rel="stylesheet" href="fluff.css" />
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #fffafc;
+      color: #333;
+    }
+    header {
+      background: #f4d5f5;
+      padding: 2rem;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #aa59c2;
+    }
+    h2 {
+      color: #944fb0;
+    }
+    section {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    code {
+      background: #f0ebf5;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+    }
+    .example {
+      background: #f9f3fc;
+      border: 1px solid #e2cce9;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+    .fl-row > div {
+      text-align: center;
+    }
+    
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📚 Fluff.css</h1>
+    <p>Mini framework para diseños responsive con estilo suave</p>
+    <p>
+        <strong>✨ Un framework amigable y ligero</strong>
+
+        Fluff.css es un micro-framework CSS y SCSS centrado exclusivamente en grids y layouts responsivos. Ligero, minimalista y sin distracciones, ideal para quienes buscan una base elegante y clara para construir interfaces sin el peso de grandes frameworks.
+    </p>
+    <p>
+        <strong>🌸 Filosofía de diseño</strong>
+
+        Fluff.css nace del deseo de tener algo suave, simple y útil. Un sistema de grids sin complicaciones, inspirado en frameworks clásicos pero adaptado a una estética más ligera, moderna y rosa.
+    </p>
+    <p>
+       <strong>✅ Ventajas principales</strong>
+
+        Ligero: sin dependencias, sin JS, sin estilos innecesarios. Solo CSS puro (o SCSS si prefieres personalizar).
+
+        Grid moderno: basado en display: grid, no en Flexbox, con clases intuitivas para crear layouts rápidamente.
+
+        Responsive desde el primer momento: incluye breakpoints móviles y clases utilitarias para cada tamaño.
+
+        Espaciado útil: clases m- y p- para márgenes y paddings, al estilo de los sistemas utilitarios modernos.
+
+        Fácil de leer y extender: el SCSS está ordenado, comentado y preparado para escalar si lo necesitas.
+
+        Estética suave: una base limpia y femenina que se adapta perfectamente a proyectos visuales y delicados.
+    </p>
+  </header>
+
+  <section>
+    <h2>Instalación</h2>
+    <p>Incluye el archivo <code>fluff.css</code> en tu HTML:</p>
+    <pre><code>&lt;link rel="stylesheet" href="fluff.css" /&gt;</code></pre>
+
+    <h2>Contenedores</h2>
+    <div class="example">
+      <div class="fl-container" style="background:#eee;padding:1rem;">.fl-container</div>
+    </div>
+    <div class="example">
+      <div class="fl-container-fluid" style="background:#ddd;padding:1rem;">.fl-container-fluid</div>
+    </div>
+
+    <h2>Grid y columnas</h2>
+    <div class="example fl-row">
+      <div class="fl-col-6" style="background:#eecff4;padding:1rem">.fl-col-6</div>
+      <div class="fl-col-6" style="background:#d8bde6;padding:1rem">.fl-col-6</div>
+    </div>
+    <div class="example fl-row">
+      <div class="fl-col-4" style="background:#ecd5f3;padding:1rem">.fl-col-4</div>
+      <div class="fl-col-4" style="background:#d4b8df;padding:1rem">.fl-col-4</div>
+      <div class="fl-col-4" style="background:#c6a5d2;padding:1rem">.fl-col-4</div>
+    </div>
+
+    <h2>Responsive</h2>
+    <pre><code>&lt;div class="fl-col-12 fl-col-md-6 fl-col-lg-4"&gt;&lt;/div&gt;</code></pre>
+    <div class="example fl-row">
+      <div class="fl-col-12 fl-col-md-6 fl-col-lg-4" style="background:#f0d1f3;padding:1rem">Responsive Col</div>
+      <div class="fl-col-12 fl-col-md-6 fl-col-lg-4" style="background:#e2bee9;padding:1rem">Responsive Col</div>
+      <div class="fl-col-12 fl-col-md-6 fl-col-lg-4" style="background:#d3aee0;padding:1rem">Responsive Col</div>
+    </div>
+
+    <h2>Espaciado</h2>
+    <div class="example">
+      <div class="m-4 p-4" style="background:#f7e7fa">.m-4 .p-4</div>
+    </div>
+    <div class="example">
+      <div class="mt-2 mb-2 px-3 py-1" style="background:#edd3f3">.mt-2 .mb-2 .px-3 .py-1</div>
+    </div>
+
+    <h2>Display</h2>
+    <div class="example">
+      <div class="d-none d-md-block" style="background:#ccc;padding:1rem">Solo visible en md+</div>
+    </div>
+
+    <h2>Alineación</h2>
+    <div class="example fl-row justify-center align-center" style="height:100px; background:#eee">
+      <div class="fl-col-4 p-3" style="background:#eacdf4">Centrado</div>
+      <div class="fl-col-4 p-3" style="background:#eacdf4">Centrado</div>
+      <div class="fl-col-4 p-3" style="background:#eacdf4">Centrado</div>
+    </div>
+
+    <h2>Combinar utilidades</h2>
+    <div class="example fl-row">
+      <div class="fl-col-6 p-3 m-2" style="background:#e5c0ef">Columna con padding y margen</div>
+      <div class="fl-col-6 p-1 m-4" style="background:#e2a9ea">Otra columna</div>
+    </div>
+  </section>
+</body>
+</html>
